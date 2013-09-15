@@ -5,8 +5,7 @@ A NOVEL TRANSITION BASED ENCODING SCHEME FOR ASP PLANNING
 A NOVEL TRANSITION BASED ENCODING SCHEME FOR ASP PLANNING
 ===
 
-Planning as satisfiability is one of the major paradigms for planning. 
-The paper from [Huang et al., 2010] proposed a novel SAT encoding for planning problems based on the SAS+ formalism. This formalism represents a classical planning problem by a set of multi-valued state variables.
+Planning as satisfiability is one of the major paradigms for planning. The paper from [Huang et al., 2010] proposed a novel SAT encoding for planning problems based on the SAS+ formalism. This formalism represents a classical planning problem by a set of multi-valued state variables.
 
 A planning task in the SAS+ formalism, referred to as a SAS+ planning problem, is defined as a tuple consisting of the state variables, a set of the actions that are possible on a domain, the initial state and the goal state.
 This new encoding, named SASE, exploits the structural information in the SAS+ formalism, leading to more compact SAT instances, and less number of clauses. Also, the results presented by Huang et al. shows an increase of performance regarding time and memory.
