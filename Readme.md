@@ -1,8 +1,4 @@
-A NOVEL TRANSITION BASED ENCODING SCHEME FOR ASP PLANNING
-======
-
-
-A NOVEL TRANSITION BASED ENCODING SCHEME FOR ASP PLANNING
+A novel trnasition based encoding scheme for ASP planning
 ===
 
 Planning as satisfiability is one of the major paradigms for planning. The paper from [Huang et al., 2010] proposed a novel SAT encoding for planning problems based on the SAS+ formalism. This formalism represents a classical planning problem by a set of multi-valued state variables.
