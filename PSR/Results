@@ -1,0 +1,28 @@
+
+t=1 : lp2 ans lp1 are connected to the poser supply , lp1 is carrying faulty signal so it should be disconnected by the first switch in its way, l2u's one end is connected to lp2 and its other end is connected to the userdevice and it will have safesignal because of being connected to lp2, so at t=1 this is the path of safe signal : power-->lp2-->l2u-->user_device(on) 
+
+	in(lp2,safe,1) 
+	in(lp1,faulty,1) 
+	in(l2u,safe,1)
+	status(sd3,close,1) 
+	status(userdevice,open,1) 
+	status(sd1,close,1)
+	status(sd2,open,1)
+
+t=2 : lp2 ans lp1 are connected to the poser supply , lp2 is carrying faulty signal so it should be disconnected by the first switch in its way, l13's one end is connected to lp1 and its other end is connected to switch(sd3) and it will have safesignal because of being connected to lp1, l3u is connected to l13 and it also will cary safe signal, so at t=2 this is the path of safe signal : power-->lp1-->l13-->l3u-->user_device(on) 
+	in(lp2,faulty,2) 
+	in(lp1,safe,2) 
+	in(l3u,safe,2) 
+	in(l13,safe,2) 
+	status(sd2,close,2) 
+	status(userdevice,open,2) 
+	status(sd3,open,2) 
+	status(sd1,open,2 )
+
+transitions: sd1 at t=1 is close and at t=2 is open and it's shown below in tranisition(sd1...) the other transitions are also generetaed the same way .
+	transition(sd2,status(sd2,open,1),status(sd2,close,2),1) 
+	transition(sd3,status(sd3,close,1),status(sd3,open,2),1) 
+	transition(sd1,status(sd1,close,1),status(sd1,open,2),1) 
+	transition(userdevice,u_status(userdevice,on,1),u_status(userdevice,on,2),1) 
+	transition(lp1,in(lp1,faulty,1),in(lp1,safe,2),1) 
+	transition(lp2,in(lp2,safe,1),in(lp2,faulty,2),1)

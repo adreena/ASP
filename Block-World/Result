@@ -1,0 +1,35 @@
+
+the main actions are : move(a,c,1) move(b,a,2), so transitions will be defined in this way:
+
+- t=1 to t=2
+	block a :
+		transitions(a,pos(a,table,1),pos(a,c,2),1) 
+		transitions(a,clear(a,true,1),clear(a,true,2),1)
+	block b :
+		transitions(b,pos(b,table,1),pos(b,table,2),1)
+		transitions(b,clear(b,true,1),clear(b,true,2),1) 
+	block c :
+		transitions(c,pos(c,table,1),pos(c,table,2),1)
+		transitions(c,clear(c,true,1),clear(c,false,2),1)
+ 
+- t=2 to t=3
+	block a :
+		transitions(a,pos(a,c,2),pos(a,c,3),2)
+		transitions(a,clear(a,true,2),clear(a,false,3),2)
+	block b :
+		transitions(b,pos(b,table,2),pos(b,a,3),2) 
+		transitions(b,clear(b,true,2),clear(b,true,3),2) 
+	block c :
+		transitions(c,pos(c,table,2),pos(c,table,3),2) 
+		transitions(c,clear(c,false,2),clear(c,false,3),2)
+
+- prevaling transtions after reaching the goal 
+	transitions(c,pos(c,table,3),pos(c,table,4),3) 
+	transitions(b,pos(b,a,3),pos(b,a,4),3) 
+	transitions(a,pos(a,c,3),pos(a,c,4),3) 
+
+ 
+
+ 
+ 
+

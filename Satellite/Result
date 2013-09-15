@@ -1,0 +1,28 @@
+
+Results: 
+
+
+transitions from t=1 to t=2 : satelite is changing its direction , camera1 is going to take the picture, camera2 will be free
+
+	transition(sat,dir(sat,star1,1),dir(sat,phenomenon2,2),1)
+	transitions(camera1,mode(camera1,ready,1),mode(camera1,saving,2),1)
+	transitions(camera2,mode(camera2,ready,1),mode(camera2,ready,2),1)
+ 
+transitions from t=2 to t=3 : satelite's direction should not change becuase camera is taking picture , camera1 is going to save the picture, camera2 is going to take picture 
+
+	transition(sat,dir(sat,phenomenon2,2),dir(sat,phenomenon2,3),2) 
+	transitions(camera2,mode(camera2,ready,2),mode(camera2,saving,3),2)
+	transitions(camera1,mode(camera1,saving,2),mode(camera1,saving,3),2)
+
+transitions from t=3 to t=4 : satelite is changing its direction , camera1 will be free, camera2 is saving  
+
+	transition(sat,dir(sat,phenomenon2,3),dir(sat,phenomenon1,4),3) 
+	transitions(camera2,mode(camera2,saving,3),mode(camera2,ready,4),3) 
+	transitions(camera1,mode(camera1,saving,3),mode(camera1,ready,4),3) 
+ 
+transitions from t=4 to t=5 : satelite's direction should not change , camera1 is free, camera2 is taking picture 
+
+	transitions(camera2,mode(camera2,ready,4),mode(camera2,saving,5),4) 
+	transition(sat,dir(sat,phenomenon1,4),dir(sat,phenomenon1,5),4)
+	transitions(camera1,mode(camera1,ready,4),mode(camera1,ready,5),4) 
+
