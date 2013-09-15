@@ -20,12 +20,17 @@ Folders
 --------
 There are 3 folders in here, with the name of each problem we challenged in our project.
 In each folder you can see :
-	2 codes : 
+
+	- 2 codes : 
+		
 		1- asp old_version for example block_asp.lp
+		
 		2- asp new version for example block_transition.lp
-	Rresult.txt:
-		in this file , we have provided you a simple analysis of the reuslt.
-	PDDL folder:
+	
+	- Rresult.txt:
+	 	in this file , we have provided you a simple analysis of the reuslt.
+	
+	- PDDL folder:
 		in this folder , the oroginal version of the code is provided which is in pddl format. 
 
 
